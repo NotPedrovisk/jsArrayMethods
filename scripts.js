@@ -29,10 +29,17 @@ console.log(filtered)
 
 console.log("----------Exercise 3----------");
 //get array, removes all values except between a & b, should  modify the original array and not return anything
-let inArr = [5,3,8,1,2,4,7,9];
-
+let inArr = [1,2,3,4,5,6,7,8,9,];
+//could not finish it without seeing solution, was trying a filter method instead of for loop
 function filterRangeInPlace(arr,a,b){
-    return arr.
+    for(let n = 0; n < arr.length;n++){
+      let value = arr[n]
+      if(value < a || value > b){
+        inArr.splice(n,1);
+        n--;
+      }
+    }
 }
 
-filterRangeInPlace(inArr, 1,4)//expected to return 
+filterRangeInPlace(inArr, 2,5)//expected to return 2,3,4,5
+console.log(inArr)
