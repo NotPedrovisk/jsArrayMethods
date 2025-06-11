@@ -43,3 +43,14 @@ function filterRangeInPlace(arr,a,b){
 
 filterRangeInPlace(inArr, 2,5)//expected to return 2,3,4,5
 console.log(inArr)
+
+console.log("----------Exercise 4----------");
+let arrDecreasing = [5,2,1,-10,8];
+
+//sort array in decreasing order
+//iterates every item of the array with the others,eg: 5 would be "a", 2 would be "b"
+//then checks if function returns true, so 2-5, false
+//then 5 stays as "a", then 1 would be "b", and so on
+arrDecreasing.sort((a,b)=> b-a)
+
+console.log(arrDecreasing);
