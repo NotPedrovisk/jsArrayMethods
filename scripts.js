@@ -54,3 +54,28 @@ let arrDecreasing = [5,2,1,-10,8];
 arrDecreasing.sort((a,b)=> b-a)
 
 console.log(arrDecreasing);
+//had to look at solution, TOP didnt explain what JSInfo did;
+console.log("----------Exercise 5----------");
+let arrCopy = ["HTML", "JavaScript", "CSS"];
+
+let sorted = copySorted(arrCopy);
+
+function copySorted(arr){
+  return arr.slice().sort()
+}
+
+console.log(arrCopy);
+console.log(sorted);
+
+console.log("----------Exercise 6----------");
+//Write the function shuffle(array) that shuffles (randomly reorders) elements of the array
+let arrToShuffle = [1,2,3,4];
+
+function shuffleArray(arr){
+  let shufled = arr.sort(()=> Math.random() - 0.5);
+  console.log(shufled);
+}
+
+shuffleArray(arrToShuffle);
+
+shuffleArray(arrToShuffle);
