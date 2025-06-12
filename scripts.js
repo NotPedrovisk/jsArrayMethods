@@ -72,6 +72,7 @@ console.log("----------Exercise 6----------");
 let arrToShuffle = [1,2,3,4];
 
 function shuffleArray(arr){
+  //math.random() - 0.5 is a random number that may be positive or negative
   let shufled = arr.sort(()=> Math.random() - 0.5);
   console.log(shufled);
 }
@@ -79,3 +80,22 @@ function shuffleArray(arr){
 shuffleArray(arrToShuffle);
 
 shuffleArray(arrToShuffle);
+
+console.log("----------Exercise 7----------");
+
+let strings = ["Hare", "Krishna", "Hare", "Krishna",
+  "Krishna", "Krishna", "Hare", "Hare", ":-O"];
+
+function unique(arr){
+  let result = [];
+
+  for(let str of arr){
+    if (!result.includes(str)){
+      result.push(str);
+    }
+  }
+  return result;
+};
+
+console.log(unique(strings));
+//had no idea what to do, was trying to do something like exercise 3
