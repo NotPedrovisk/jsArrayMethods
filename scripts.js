@@ -101,6 +101,7 @@ console.log(unique(strings));
 //had no idea what to do, was trying to do something like exercise 3
 
 console.log("----------Exercise Map To Names----------");
+//code used to map an array of user obj into array of just the names
 let john = {name: "John", age:25};
 let pete = {name: "Pete", age: 30};
 let moe = {name: "Moe", age:28};
@@ -113,7 +114,8 @@ let name = users.map(item=>
 console.log(name);
 
 console.log("----------Exercise Map To Objects----------");
-
+//code used to create another array of user objs with full names generated from name and surname from
+//original array
 let joao = {name: "Joao", surname: "Smith", id:1};
 let pedro = {name: "Pedro", surname: "Hunt", id:2};
 let fred = {name: "Fred", surname: "Key", id:3};
@@ -126,3 +128,21 @@ let usersMapped = objUsers.map(user=>({
 
   console.log(usersMapped[0].id);
   console.log(usersMapped[0].fullName);
+
+console.log("----------Exercise Sort Users By Age----------");
+//sorts through obj array by age;
+let jack = {name: "Jack", age:25};
+let mike = {name: "Mike", age: 30};
+let steve = {name: "Steve", age:28};
+
+let ageArr = [jack,mike,steve];
+
+function sortByAge(array){
+  array.sort((a,b)=> a.age - b.age)
+};
+
+sortByAge(ageArr);
+
+console.log(ageArr[0].name);//jack
+console.log(ageArr[1].name);//steve
+console.log(ageArr[2].name);//mike
