@@ -111,3 +111,18 @@ let name = users.map(item=>
   item.name);
 
 console.log(name);
+
+console.log("----------Exercise Map To Objects----------");
+
+let joao = {name: "Joao", surname: "Smith", id:1};
+let pedro = {name: "Pedro", surname: "Hunt", id:2};
+let fred = {name: "Fred", surname: "Key", id:3};
+
+let objUsers = [joao,pedro,fred];
+
+let usersMapped = objUsers.map(user=>({
+  fullName : user.name +" " + user.surname,
+  id:user.id}));
+
+  console.log(usersMapped[0].id);
+  console.log(usersMapped[0].fullName);
