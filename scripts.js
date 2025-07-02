@@ -99,3 +99,15 @@ function unique(arr){
 
 console.log(unique(strings));
 //had no idea what to do, was trying to do something like exercise 3
+
+console.log("----------Exercise Map To Names----------");
+let john = {name: "John", age:25};
+let pete = {name: "Pete", age: 30};
+let moe = {name: "Moe", age:28};
+
+let users = [john, pete, moe];
+
+let name = users.map(item=>
+  item.name);
+
+console.log(name);
