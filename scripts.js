@@ -146,3 +146,19 @@ sortByAge(ageArr);
 console.log(ageArr[0].name);//jack
 console.log(ageArr[1].name);//steve
 console.log(ageArr[2].name);//mike
+
+console.log("----------Exercise Get Average Age----------");
+
+let jay = {name: "Jay", age:25};
+let mark = {name: "Mark", age: 30};
+let stone = {name: "Stone", age:28};
+
+let avgArr = [jay,mark,stone];
+
+function getAverageAge(arr){
+  let total = arr.reduce((sum, current)=>sum + current.age,0);
+  return Math.round(total/avgArr.length)
+
+};
+
+console.log(getAverageAge(avgArr));
