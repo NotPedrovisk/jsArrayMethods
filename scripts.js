@@ -148,7 +148,7 @@ console.log(ageArr[1].name);//steve
 console.log(ageArr[2].name);//mike
 
 console.log("----------Exercise Get Average Age----------");
-
+//gets array of obj and returns the average age
 let jay = {name: "Jay", age:25};
 let mark = {name: "Mark", age: 30};
 let stone = {name: "Stone", age:28};
@@ -162,3 +162,20 @@ function getAverageAge(arr){
 };
 
 console.log(getAverageAge(avgArr));
+
+console.log("------Exercise Create Keyed Object From Array------");
+
+let usersToKey = [
+  {id: 'john', name: "John Smith", age: 20},
+  {id: 'ann', name: "Ann Smith", age: 24},
+  {id: 'pete', name: "Pete Peterson", age: 31},
+];
+
+function groupById(arr){
+ return arr.reduce((obj,value)=>{
+  obj[value.id] = value;
+  return obj;
+  })
+}
+
+console.log(groupById(usersToKey))
